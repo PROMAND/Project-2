@@ -2,18 +2,19 @@ package pl.byd.wsg.promand.project1.test;
 
 import java.util.List;
 
-import pl.byd.wsg.promand.project1.domain.entity.Track;
-import pl.byd.wsg.promand.project1.jsonservice.TrackService;
-import pl.byd.wsg.promand.project1.jsonservice.TrackServiceImpl;
+import pl.byd.wsg.promand.project1.domain.entity.Speaker;
+import pl.byd.wsg.promand.project1.jsonmock.SpeakerJsonService;
+import pl.byd.wsg.promand.project1.jsonmock.SpeakerJsonServiceImpl;
+import pl.byd.wsg.promand.project1.jsonservice.SpeakerService;
+import pl.byd.wsg.promand.project1.jsonservice.SpeakerServiceImpl;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        TrackService trackService = new TrackServiceImpl();
-        List<Track> tracks = trackService.getTrackList();
-        for(Track track : tracks){
-            System.out.println(track.toString());
+        SpeakerService speakerService = new SpeakerServiceImpl();
+        List<Speaker> speakerList = speakerService.getSpeakerList();
+        for(Speaker speaker : speakerList){
+            System.out.println(speaker);
         }
     }
 }

@@ -12,6 +12,17 @@ public class Speaker {
     private String description;
     private ProfileList profileList;
 
+
+    public Speaker(long id, String name, String surname, String photoUrl, Company company, String description, ProfileList profileList) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.photoUrl = photoUrl;
+        this.company = company;
+        this.description = description;
+        this.profileList = profileList;
+    }
+
     public long getId() {
         return id;
     }

@@ -9,6 +9,13 @@ public class ProfileList {
 
     private List<Profile> profileList = new ArrayList<Profile>();
 
+    public ProfileList() {
+    }
+
+    public ProfileList(List<Profile> profileList) {
+        this.profileList = profileList;
+    }
+
     public void add(Profile profile) {
         profileList.add(profile);
     }

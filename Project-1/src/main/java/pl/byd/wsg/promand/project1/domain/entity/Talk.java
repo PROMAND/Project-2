@@ -9,5 +9,5 @@ public class Talk {
     private String description;
     private Date startTime;
     private Date endTime;
-    //TODO: end/start time, tracks and speaker
+    //TODO: constructor, end/start time, tracks and speaker
 }
