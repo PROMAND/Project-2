@@ -1,5 +1,7 @@
 package pl.byd.wsg.promand.project1.domain.entity;
 
+import pl.byd.wsg.promand.project1.domain.list.ProfileList;
+
 public class Speaker {
 
     private long id;
@@ -8,8 +10,7 @@ public class Speaker {
     private String photoUrl;
     private Company company;
     private String description;
-
-    //TODO: profiles
+    private ProfileList profileList;
 
     public long getId() {
         return id;
@@ -57,5 +58,13 @@ public class Speaker {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ProfileList getProfileList() {
+        return profileList;
+    }
+
+    public void setProfileList(ProfileList profileList) {
+        this.profileList = profileList;
     }
 }
