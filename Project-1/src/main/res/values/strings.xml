@@ -3,6 +3,9 @@
 
     <string name="app_name">Project-2</string>
     <string name="hello_world">Hello world!</string>
+    <string name="talks">Talks</string>
+    <string name="speakers">Speakers</string>
+    <string name="my_scheduler">My Scheduler</string>
     <string name="action_settings">Settings</string>
 
 </resources>
