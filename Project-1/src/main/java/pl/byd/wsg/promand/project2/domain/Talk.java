@@ -1,4 +1,4 @@
-package pl.byd.wsg.promand.project1.domain;
+package pl.byd.wsg.promand.project2.domain;
 
 import java.util.Date;
 
