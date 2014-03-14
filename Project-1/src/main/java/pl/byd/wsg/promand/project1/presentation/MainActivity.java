@@ -1,4 +1,4 @@
-package pl.byd.wsg.promand.project1;
+package pl.byd.wsg.promand.project1.presentation;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+
+import pl.byd.wsg.promand.project1.R;
 
 public class MainActivity extends ActionBarActivity {
 

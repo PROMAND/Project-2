@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.byd.wsg.promand.project2" >
+    package="pl.byd.wsg.promand.project1" >
 
     <application
         android:allowBackup="true"
@@ -8,25 +8,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="pl.byd.wsg.promand.project2.MainActivity"
+            android:name=".presentation.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="pl.byd.wsg.promand.project1.activities.MyScheduleTab"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="pl.byd.wsg.promand.project1.activities.AllScheduleTab"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="pl.byd.wsg.promand.project1.activities.SpeakersTab"
-            android:label="@string/app_name" >
         </activity>
     </application>
 

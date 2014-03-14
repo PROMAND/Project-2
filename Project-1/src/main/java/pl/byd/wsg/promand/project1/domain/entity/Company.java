@@ -1,4 +1,4 @@
-package pl.byd.wsg.promand.project2.domain;
+package pl.byd.wsg.promand.project1.domain.entity;
 
 public class Company {
 

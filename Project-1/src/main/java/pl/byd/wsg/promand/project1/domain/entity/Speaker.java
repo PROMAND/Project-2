@@ -1,4 +1,4 @@
-package pl.byd.wsg.promand.project2.domain;
+package pl.byd.wsg.promand.project1.domain.entity;
 
 public class Speaker {
 
@@ -8,6 +8,7 @@ public class Speaker {
     private String photoUrl;
     private Company company;
     private String description;
+
     //TODO: profiles
 
     public long getId() {
