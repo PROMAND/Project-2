@@ -14,10 +14,6 @@ public class TrackList {
         trackList.add(track);
     }
 
-    public Track get(int i) {
-        return trackList.get(i);
-    }
-
     public List<Track> getTrackList(){
         return trackList;
     }
