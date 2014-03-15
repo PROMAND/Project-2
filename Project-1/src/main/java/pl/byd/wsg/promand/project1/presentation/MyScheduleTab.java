@@ -1,19 +1,15 @@
-package pl.byd.wsg.promand.project1.activities;
+package pl.byd.wsg.promand.project1.presentation;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import pl.byd.wsg.promand.project1.R;
 
-/**
- * Created by Frexas on 14/03/14.
- */
-public class AllScheduleTab extends Activity {
+public class MyScheduleTab extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.all_schedule_tab);
+        setContentView(R.layout.my_schedule_tab);
     }
-
 }
