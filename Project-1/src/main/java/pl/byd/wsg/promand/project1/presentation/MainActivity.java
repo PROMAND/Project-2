@@ -19,9 +19,13 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         mLocalActivityManager = new LocalActivityManager(this, false);
-
-        TabHost myTabHost = (TabHost) findViewById(R.id.tabHost);
         mLocalActivityManager.dispatchCreate(savedInstanceState);
+
+        setupTabs();
+    }
+
+    private void setupTabs () {
+        TabHost myTabHost = (TabHost) findViewById(R.id.tabHost);
         myTabHost.setup(mLocalActivityManager);
 
         TabHost.TabSpec tabSpec = myTabHost.newTabSpec("MyScheduleTab");
