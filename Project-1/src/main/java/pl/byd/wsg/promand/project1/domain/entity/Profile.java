@@ -14,15 +14,7 @@ public class Profile {
         return profileType;
     }
 
-    public void setProfileType(ProfileType profileType) {
-        this.profileType = profileType;
-    }
-
     public String getProfileUrl() {
         return profileUrl;
-    }
-
-    public void setProfileUrl(String profileUrl) {
-        this.profileUrl = profileUrl;
     }
 }
