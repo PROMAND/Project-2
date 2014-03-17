@@ -1,14 +1,18 @@
 package pl.byd.wsg.promand.project1.presentation.adapters;
 
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.Context;
 import android.widget.BaseAdapter;
-
 import java.util.List;
 
 public abstract class BaseListAdapter<T> extends BaseAdapter{
 
+    private Context context;
     private List<T> list;
+
+    public BaseListAdapter(Context context, List<T> list) {
+        this.context = context;
+        this.list = list;
+    }
 
     @Override
     public int getCount() {
@@ -16,7 +20,7 @@ public abstract class BaseListAdapter<T> extends BaseAdapter{
     }
 
     @Override
-    public Object getItem(int index) {
+    public T getItem(int index) {
         return list.get(index);
     }
 
@@ -25,9 +29,7 @@ public abstract class BaseListAdapter<T> extends BaseAdapter{
         return index;
     }
 
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+    public Context getContext() {
+        return context;
     }
-
 }
