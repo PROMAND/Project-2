@@ -46,13 +46,14 @@ public class TalksAdapter extends BaseAdapter{
         if (view == null){
             view = inflater.inflate(R.layout.all_schedule_cell, null);
         }
+        Talk talk = talkList.get(i);
+
         TextView text = (TextView) view.findViewById(R.id.talkTitle);
-        text.setText(talkList.get(i).getTitle());
+        text.setText(talk.getTitle());
 
-        String startTime = DateUtils.hoursMinutesFormat(talkList.get(i).getStartTime());
-        String endTime = DateUtils.hoursMinutesFormat(talkList.get(i).getEndTime());
+        String startTime = DateUtils.hoursMinutesFormat(talk.getStartTime());
+        String endTime = DateUtils.hoursMinutesFormat(talk.getEndTime());
         text = (TextView) view.findViewById(R.id.talkStartEndsTime);
-
         text.setText(startTime + " - " + endTime);
         return view;
     }
