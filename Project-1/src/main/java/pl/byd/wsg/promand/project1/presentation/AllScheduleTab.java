@@ -7,7 +7,7 @@ import android.widget.ListView;
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.jsonservice.TalkService;
 import pl.byd.wsg.promand.project1.jsonservice.TalkServiceImpl;
-import pl.byd.wsg.promand.project1.presentation.adapters.TalksAdapter;
+import pl.byd.wsg.promand.project1.presentation.adapters.ScheduleAdapter;
 
 public class AllScheduleTab extends Activity {
 
@@ -19,7 +19,7 @@ public class AllScheduleTab extends Activity {
         setContentView(R.layout.all_schedule_tab);
 
         ListView listView = (ListView) findViewById(R.id.textView);
-        listView.setAdapter(new TalksAdapter(this, talkService.getTalkList()));
+        listView.setAdapter(new ScheduleAdapter(this, talkService.getTalkList()));
     }
 
 }

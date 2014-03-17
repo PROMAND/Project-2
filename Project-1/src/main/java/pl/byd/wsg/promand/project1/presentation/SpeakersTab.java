@@ -8,23 +8,23 @@ import java.util.List;
 
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.domain.entity.Speaker;
+import pl.byd.wsg.promand.project1.jsonservice.SpeakerService;
 import pl.byd.wsg.promand.project1.jsonservice.SpeakerServiceImpl;
+import pl.byd.wsg.promand.project1.presentation.adapters.ScheduleAdapter;
+import pl.byd.wsg.promand.project1.presentation.adapters.SpeakerAdapter;
 import pl.byd.wsg.promand.project1.presentation.adapters.SpeakerCellAdapter;
 
 public class SpeakersTab extends Activity {
-    ListView listview;
+
+    private SpeakerService speakerService = new SpeakerServiceImpl();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speakers_tab);
 
-        SpeakerServiceImpl speakerService = new SpeakerServiceImpl();
-        List<Speaker> listOfSpeakers = speakerService.getSpeakerList();
-        Speaker[] speakersArray = listOfSpeakers.toArray(new Speaker[listOfSpeakers.size()]);
-
-        listview = (ListView) findViewById(R.id.speakersListView);
-        listview.setAdapter(new SpeakerCellAdapter(this, speakersArray));
+        ListView listView = (ListView) findViewById(R.id.speakersListView);
+        listView.setAdapter(new SpeakerAdapter(this, speakerService.getSpeakerList()));
     }
 
 }
