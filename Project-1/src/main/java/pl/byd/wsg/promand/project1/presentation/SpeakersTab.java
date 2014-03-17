@@ -1,15 +1,20 @@
 package pl.byd.wsg.promand.project1.presentation;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import pl.byd.wsg.promand.project1.R;
+import pl.byd.wsg.promand.project1.domain.entity.Speaker;
 import pl.byd.wsg.promand.project1.jsonservice.SpeakerService;
 import pl.byd.wsg.promand.project1.jsonservice.SpeakerServiceImpl;
 import pl.byd.wsg.promand.project1.presentation.adapters.SpeakerAdapter;
 
-public class SpeakersTab extends Activity {
+public class SpeakersTab extends Activity implements AdapterView.OnItemClickListener{
 
     private SpeakerService speakerService = new SpeakerServiceImpl();
 
@@ -22,4 +27,9 @@ public class SpeakersTab extends Activity {
         listView.setAdapter(new SpeakerAdapter(this, speakerService.getSpeakerList()));
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
+        Speaker speaker = (Speaker)adapterView.getItemAtPosition(index);
+
+    }
 }

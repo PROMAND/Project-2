@@ -16,8 +16,8 @@ public class TalkJsonServiceImpl implements TalkJsonService {
     public TalkJsonServiceImpl() {
         talkList.add(new Talk(1, "How to be hot",
                 "You will get some advices for how to be hot",
-                DateUtils.createDate(2014, 12, 31, 00, 00),
-                DateUtils.createDate(2015, 1, 1, 20, 00),
+                DateUtils.createDate(2015, 1, 1, 10, 00),
+                DateUtils.createDate(2015, 1, 1, 12, 00),
                 Arrays.asList(1L, 2L),
                 Arrays.asList(1L, 5L)
                 ));

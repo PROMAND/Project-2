@@ -23,15 +23,22 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.all_schedule_cell, null);
         Talk talk = getItem(index);
 
-        TextView talkTitle = (TextView) view.findViewById(R.id.talkTitle);
+        TextView talkTitle = (TextView) view.findViewById(R.id.talk_title);
         talkTitle.setText(talk.getTitle());
 
         String startTime = DateUtils.hoursMinutesFormat(talk.getStartTime());
+        TextView talkStartTime = (TextView) view.findViewById(R.id.start_time);
+        talkStartTime.setText(startTime);
+
         String endTime = DateUtils.hoursMinutesFormat(talk.getEndTime());
+        TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
+        talkEndTime.setText(endTime);
 
-        TextView talkTime = (TextView) view.findViewById(R.id.talkStartEndsTime);
-        talkTime.setText(startTime + " - " + endTime);
+        TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
+        speakerFullName.setText("Tom cruse"); //TODO
 
+        TextView trackTitle = (TextView) view.findViewById(R.id.track_title);
+        trackTitle.setText("100"); //TODO
         return view;
     }
 }
