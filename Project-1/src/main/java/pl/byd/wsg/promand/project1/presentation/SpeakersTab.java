@@ -7,9 +7,9 @@ import android.widget.ListView;
 import java.util.List;
 
 import pl.byd.wsg.promand.project1.R;
-import pl.byd.wsg.promand.project1.adapters.SpeakerCellAdapter;
 import pl.byd.wsg.promand.project1.domain.entity.Speaker;
 import pl.byd.wsg.promand.project1.jsonservice.SpeakerServiceImpl;
+import pl.byd.wsg.promand.project1.presentation.adapters.SpeakerCellAdapter;
 
 public class SpeakersTab extends Activity {
     ListView listview;
