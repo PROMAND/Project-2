@@ -26,7 +26,7 @@ public class SpeakerAdapter extends BaseListAdapter<Speaker> {
         name.setText(speaker.getName());
 
         TextView surname = (TextView) view.findViewById(R.id.speakerCellDetailsText);
-        surname.setText(speaker.getName());
+        surname.setText(speaker.getSurname());
 
         return view;
     }
