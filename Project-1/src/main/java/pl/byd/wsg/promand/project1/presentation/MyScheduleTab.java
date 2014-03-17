@@ -2,14 +2,23 @@ package pl.byd.wsg.promand.project1.presentation;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import pl.byd.wsg.promand.project1.R;
+import pl.byd.wsg.promand.project1.dao.PersonalScheduleDao;
+import pl.byd.wsg.promand.project1.presentation.adapters.MyScheduleAdapter;
+import pl.byd.wsg.promand.project1.presentation.adapters.TalksAdapter;
 
 public class MyScheduleTab extends Activity {
+
+    private PersonalScheduleDao personalScheduleDao = PersonalScheduleDao.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_schedule_tab);
+
+        ListView listView = (ListView) findViewById(R.id.myScheduleView);
+        listView.setAdapter(new MyScheduleAdapter(this, personalScheduleDao.getPersonalTalkList()));
     }
 }
