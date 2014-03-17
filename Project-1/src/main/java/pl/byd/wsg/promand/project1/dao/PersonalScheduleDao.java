@@ -4,11 +4,7 @@ package pl.byd.wsg.promand.project1.dao;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.inject.Inject;
-
 import pl.byd.wsg.promand.project1.domain.entity.Talk;
-import pl.byd.wsg.promand.project1.jsonservice.TalkService;
 import pl.byd.wsg.promand.project1.utils.DateUtils;
 
 public class PersonalScheduleDao {
