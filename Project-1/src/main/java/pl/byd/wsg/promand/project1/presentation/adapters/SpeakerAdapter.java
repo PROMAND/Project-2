@@ -22,11 +22,11 @@ public class SpeakerAdapter extends BaseListAdapter<Speaker> {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.speaker_cell, null);
         Speaker speaker = getItem(index);
 
-        TextView name = (TextView) view.findViewById(R.id.speakerCellHeaderText);
-        name.setText(speaker.getName());
+        TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
+        speakerFullName.setText(speaker.getName() + " " + speaker.getSurname());
 
-        TextView surname = (TextView) view.findViewById(R.id.speakerCellDetailsText);
-        surname.setText(speaker.getSurname());
+        TextView speakerCompany = (TextView) view.findViewById(R.id.speaker_company);
+        speakerCompany.setText(speaker.getCompany().getName());
 
         return view;
     }

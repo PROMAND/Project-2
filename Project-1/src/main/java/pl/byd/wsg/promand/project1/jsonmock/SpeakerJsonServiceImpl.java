@@ -24,7 +24,7 @@ public class SpeakerJsonServiceImpl implements SpeakerJsonService {
         speakerList.add(
                 new Speaker(2, "Chuck", "Noris",
                         "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645",
-                        new Company("Hollywood", "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645"),
+                        new Company("HollyWood", "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645"),
                         "Actor", new ProfileList(Arrays.asList(new Profile(ProfileType.LINKEDIN, "https://www.linkedin.com/")))));
     }
 

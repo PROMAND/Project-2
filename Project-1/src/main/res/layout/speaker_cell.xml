@@ -4,31 +4,42 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"
-        android:id="@+id/speakerImageView" />
 
-
-    <LinearLayout
+    <TableRow
+        android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:padding="5dip">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name placeholder"
-            android:id="@+id/speakerCellHeaderText"/>
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/speaker_image"
+            android:layout_marginRight="15dip"/>
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Surname placeholder"
-            android:id="@+id/speakerCellDetailsText"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speaker_full_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speaker_company"/>
 
         </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/speaker_company"
+            android:layout_marginRight="15dip"/>
 
 
+    </TableRow>
 </LinearLayout>
