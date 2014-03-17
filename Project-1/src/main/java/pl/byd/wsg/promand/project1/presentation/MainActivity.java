@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
 
         tabSpec = myTabHost.newTabSpec("allSchedule");
         tabSpec.setIndicator("All\nSchedule");
-        myIntent = new Intent(this, AllScheduleTab.class);
+        myIntent = new Intent(this, ScheduleTab.class);
         tabSpec.setContent(myIntent);
         myTabHost.addTab(tabSpec);
 

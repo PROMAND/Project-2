@@ -9,7 +9,7 @@ import pl.byd.wsg.promand.project1.jsonservice.TalkService;
 import pl.byd.wsg.promand.project1.jsonservice.TalkServiceImpl;
 import pl.byd.wsg.promand.project1.presentation.adapters.ScheduleAdapter;
 
-public class AllScheduleTab extends Activity {
+public class ScheduleTab extends Activity {
 
     private TalkService talkService = new TalkServiceImpl();
 

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.AllScheduleTab"
+            android:name=".presentation.ScheduleTab"
             android:label="@string/app_name" >
         </activity>
         <activity
