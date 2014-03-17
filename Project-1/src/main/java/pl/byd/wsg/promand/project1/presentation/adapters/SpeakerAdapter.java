@@ -11,7 +11,7 @@ import java.util.List;
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.domain.entity.Speaker;
 
-public class SpeakerAdapter extends BaseListAdapter<Speaker>{
+public class SpeakerAdapter extends BaseListAdapter<Speaker> {
 
     public SpeakerAdapter(Context context, List<Speaker> list) {
         super(context, list);
