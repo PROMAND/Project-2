@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:padding="5dip">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -25,16 +25,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/end_time"
-                android:layout_below="@id/start_time" />
+                android:id="@+id/end_time"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/track_title"
-                android:layout_below="@id/end_time" />
-
-        </RelativeLayout>
+                android:id="@+id/track_title"/>
+        </LinearLayout>
 
 
         <ImageView
@@ -45,7 +42,7 @@
             android:layout_marginRight="15dip"/>
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -53,15 +50,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/talk_title" />
+                android:id="@+id/talk_title"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/speaker_full_name"
-                android:layout_below="@id/talk_title" />
-
-        </RelativeLayout>
+                android:id="@+id/speaker_full_name"/>
+        </LinearLayout>
 
     </TableRow>
 </LinearLayout>
