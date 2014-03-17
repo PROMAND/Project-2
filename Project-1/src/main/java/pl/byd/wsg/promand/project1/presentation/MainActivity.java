@@ -51,13 +51,13 @@ public class MainActivity extends ActionBarActivity {
     protected void onResume() {
         super.onResume();
         mLocalActivityManager.dispatchResume();
-        }
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
         mLocalActivityManager.dispatchPause(isFinishing());
-        }
+    }
 
 
     @Override
