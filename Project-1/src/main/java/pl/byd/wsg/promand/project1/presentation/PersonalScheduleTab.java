@@ -8,7 +8,7 @@ import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.dao.PersonalScheduleDao;
 import pl.byd.wsg.promand.project1.presentation.adapters.PersonalScheduleAdapter;
 
-public class MyScheduleTab extends Activity {
+public class PersonalScheduleTab extends Activity {
 
     private PersonalScheduleDao personalScheduleDao = PersonalScheduleDao.getInstance();
 
