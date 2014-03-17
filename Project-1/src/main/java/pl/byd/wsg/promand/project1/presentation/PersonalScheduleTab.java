@@ -7,6 +7,7 @@ import android.widget.ListView;
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.dao.PersonalScheduleDao;
 import pl.byd.wsg.promand.project1.presentation.adapters.PersonalScheduleAdapter;
+import pl.byd.wsg.promand.project1.presentation.adapters.ScheduleAdapter;
 
 public class PersonalScheduleTab extends Activity {
 

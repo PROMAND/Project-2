@@ -27,14 +27,16 @@ public class PersonalScheduleAdapter extends BaseListAdapter<Talk> {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.my_schedule_cell, null);
         Talk talk = getItem(index);
 
-        TextView title = (TextView) view.findViewById(R.id.talkTitle);
+        TextView title = (TextView) view.findViewById(R.id.talk_title);
         title.setText(talk.getTitle());
 
         String startTime = DateUtils.hoursMinutesFormat(talk.getStartTime());
-        String endTime = DateUtils.hoursMinutesFormat(talk.getEndTime());
-        TextView time = (TextView) view.findViewById(R.id.talkStartEndsTime);
-        time.setText(startTime + " - " + endTime);
+        TextView talkStartTime = (TextView) view.findViewById(R.id.start_time);
+        talkStartTime.setText(startTime);
 
+        String endTime = DateUtils.hoursMinutesFormat(talk.getEndTime());
+        TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
+        talkEndTime.setText(endTime);
         return view;
     }
 }
