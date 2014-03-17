@@ -2,10 +2,13 @@ package pl.byd.wsg.promand.project1.jsonmock;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import pl.byd.wsg.promand.project1.domain.entity.Talk;
+import pl.byd.wsg.promand.project1.domain.entity.Track;
 import pl.byd.wsg.promand.project1.domain.list.TalkList;
 import pl.byd.wsg.promand.project1.utils.DateUtils;
 
@@ -18,7 +21,7 @@ public class TalkJsonServiceImpl implements TalkJsonService {
                 "You will get some advices for how to be hot",
                 DateUtils.createDate(2015, 1, 1, 10, 00),
                 DateUtils.createDate(2015, 1, 1, 12, 00),
-                Arrays.asList(1L, 2L),
+                Arrays.asList(1L, 4L),
                 Arrays.asList(1L, 5L)
                 ));
         talkList.add(new Talk(2, "Java EE 7",
@@ -40,5 +43,16 @@ public class TalkJsonServiceImpl implements TalkJsonService {
     @Override
     public String getTalkList() {
         return new Gson().toJson(talkList);
+    }
+
+    @Override
+    public String getTalkListByTrack(Track track) {
+        TalkList resultList = new TalkList();
+        for(Talk talk : talkList.getTalkList()) {
+            if(talk.getTrackList().contains(track.getId())){
+                resultList.add(talk);
+            }
+        }
+        return new Gson().toJson(resultList);
     }
 }
