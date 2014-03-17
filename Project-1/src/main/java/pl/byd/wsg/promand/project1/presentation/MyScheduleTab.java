@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.dao.PersonalScheduleDao;
-import pl.byd.wsg.promand.project1.presentation.adapters.MyScheduleAdapter;
+import pl.byd.wsg.promand.project1.presentation.adapters.PersonalScheduleAdapter;
 
 public class MyScheduleTab extends Activity {
 
@@ -18,6 +18,6 @@ public class MyScheduleTab extends Activity {
         setContentView(R.layout.my_schedule_tab);
 
         ListView listView = (ListView) findViewById(R.id.myScheduleView);
-        listView.setAdapter(new MyScheduleAdapter(this, personalScheduleDao.getPersonalTalkList()));
+        listView.setAdapter(new PersonalScheduleAdapter(this, personalScheduleDao.getPersonalTalkList()));
     }
 }

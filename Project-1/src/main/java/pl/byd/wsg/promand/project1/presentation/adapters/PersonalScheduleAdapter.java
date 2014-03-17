@@ -15,10 +15,10 @@ import pl.byd.wsg.promand.project1.domain.entity.Talk;
 import pl.byd.wsg.promand.project1.utils.DateUtils;
 
 
-public class MyScheduleAdapter extends BaseListAdapter<Talk> {
+public class PersonalScheduleAdapter extends BaseListAdapter<Talk> {
 
 
-    public MyScheduleAdapter(Context context, List<Talk> list) {
+    public PersonalScheduleAdapter(Context context, List<Talk> list) {
         super(context, list);
     }
 
