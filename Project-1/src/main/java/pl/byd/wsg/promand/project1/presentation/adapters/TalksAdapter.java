@@ -18,12 +18,11 @@ public class TalksAdapter extends BaseAdapter{
 
     private Context context;
     private List<Talk> talkList;
-    private static LayoutInflater inflater;
+   // private static LayoutInflater inflater;
 
     public TalksAdapter(Context context, List<Talk> talkList) {
         this.context = context;
         this.talkList = talkList;
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -43,6 +42,8 @@ public class TalksAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         if (view == null){
             view = inflater.inflate(R.layout.all_schedule_cell, null);
         }
