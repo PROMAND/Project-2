@@ -12,6 +12,7 @@ import pl.byd.wsg.promand.project1.domain.entity.Speaker;
 import pl.byd.wsg.promand.project1.jsonservice.SpeakerService;
 import pl.byd.wsg.promand.project1.jsonservice.SpeakerServiceImpl;
 import pl.byd.wsg.promand.project1.presentation.adapters.SpeakerAdapter;
+import pl.byd.wsg.promand.project1.presentation.model.SpeakerDescriptionField;
 
 public class SpeakersTab extends Activity implements AdapterView.OnItemClickListener {
 
@@ -30,8 +31,13 @@ public class SpeakersTab extends Activity implements AdapterView.OnItemClickList
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
-        //Speaker speaker = (Speaker)adapterView.getItemAtPosition(index);
+        Speaker speaker = (Speaker)adapterView.getItemAtPosition(index);
+
         Intent intent = new Intent(this, SpeakerDescriptionActivity.class);
+        intent.putExtra(SpeakerDescriptionField.NAME.toString(),speaker.getName());
+        intent.putExtra(SpeakerDescriptionField.SURNAME.toString(), speaker.getSurname());
+        intent.putExtra(SpeakerDescriptionField.DESCRIPTION.toString(), speaker.getDescription());
+        intent.putExtra(SpeakerDescriptionField.COMPANY.toString(), speaker.getCompany().getName());
         startActivity(intent);
 }
 }
