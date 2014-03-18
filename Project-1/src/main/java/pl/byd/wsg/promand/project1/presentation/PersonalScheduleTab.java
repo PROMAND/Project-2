@@ -18,7 +18,7 @@ public class PersonalScheduleTab extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_schedule_tab);
 
-        ListView listView = (ListView) findViewById(R.id.myScheduleView);
+        ListView listView = (ListView) findViewById(R.id.reusableTalksList);
         listView.setAdapter(new PersonalScheduleAdapter(this, personalScheduleDao.getPersonalTalkList()));
     }
 }

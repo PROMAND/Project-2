@@ -30,13 +30,15 @@ public class MainActivity extends ActionBarActivity {
 
         TabHost.TabSpec tabSpec = myTabHost.newTabSpec("PersonalScheduleTab");
         tabSpec.setIndicator("My\nSchedule", null);
-        Intent myIntent = new Intent(this, PersonalScheduleTab.class);
+        Intent myIntent = new Intent(this, TalksListFragmentActivity.class);
+        myIntent.putExtra("tab_index", 0);
         tabSpec.setContent(myIntent);
         myTabHost.addTab(tabSpec);
 
         tabSpec = myTabHost.newTabSpec("allSchedule");
         tabSpec.setIndicator("All\nSchedule");
-        myIntent = new Intent(this, ScheduleTab.class);
+        myIntent = new Intent(this, TalksListFragmentActivity.class);
+        myIntent.putExtra("tab_index", 1);
         tabSpec.setContent(myIntent);
         myTabHost.addTab(tabSpec);
 
