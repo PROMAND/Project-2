@@ -41,7 +41,7 @@
             android:layout_height="20dp"
             android:text="@string/venue"/>
         <ImageView
-            android:layout_width="fill_parent"
+            android:layout_width="190dp"
             android:layout_height="fill_parent"
             android:id="@+id/sponsorImage"
             android:src="@drawable/sponsors"/>
