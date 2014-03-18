@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher"
-            android:id="@+id/talk_image"
+            android:id="@+id/speaker_image"
             android:layout_marginRight="15dip"/>
 
         <LinearLayout
@@ -31,15 +31,20 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/speaker_company"/>
         </LinearLayout>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:id="@+id/company_image"
-            android:layout_marginRight="15dip"/>
+
     </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/company_image"
+        android:layout_marginRight="15dip"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/speaker_description"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TEST_image_URL"/>
 </LinearLayout>

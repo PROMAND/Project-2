@@ -4,5 +4,6 @@ public enum SpeakerDescriptionField {
     NAME,
     SURNAME,
     DESCRIPTION,
-    COMPANY
+    COMPANY,
+    PHOTO_URL
 }
