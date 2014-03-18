@@ -18,12 +18,12 @@ public class SpeakerJsonServiceImpl implements SpeakerJsonService {
     public SpeakerJsonServiceImpl() {
         speakerList.add(
                 new Speaker(1, "Tom", "Cruise",
-                        "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645",
+                        "http://thyblackman.com/wp-content/uploads/2014/03/tom-cruise-actor-2014.jpg",
                         new Company("Hollywood", "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645"),
                         "Actor", new ProfileList(Arrays.asList(new Profile(ProfileType.LINKEDIN, "https://www.linkedin.com/")))));
         speakerList.add(
                 new Speaker(2, "Chuck", "Noris",
-                        "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645",
+                        "http://thyblackman.com/wp-content/uploads/2014/03/tom-cruise-actor-2014.jpg",
                         new Company("HollyWood", "http://www.national-geographic.pl/assets/empty-avatar.png?1362501645"),
                         "Actor", new ProfileList(Arrays.asList(new Profile(ProfileType.LINKEDIN, "https://www.linkedin.com/")))));
     }

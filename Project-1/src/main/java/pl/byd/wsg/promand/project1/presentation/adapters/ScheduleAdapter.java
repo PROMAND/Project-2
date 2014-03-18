@@ -20,7 +20,7 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
 
     @Override
     public View getView(int index, View v, ViewGroup viewGroup) {
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.all_schedule_cell, null);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.talks_list_cell, null);
         Talk talk = getItem(index);
 
         TextView talkTitle = (TextView) view.findViewById(R.id.talk_title);

@@ -32,7 +32,6 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:+',
-            'com.google.code.gson:gson:2.2.4'
-
-
+            'com.google.code.gson:gson:2.2.4',
+            'com.j256.ormlite:ormlite-android:4.48'
 }
