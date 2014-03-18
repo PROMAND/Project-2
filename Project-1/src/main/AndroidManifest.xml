@@ -28,6 +28,10 @@
             android:name=".presentation.SpeakersTab"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".presentation.SpeakerDescriptionActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
