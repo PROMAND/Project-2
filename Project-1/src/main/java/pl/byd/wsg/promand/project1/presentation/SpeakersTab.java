@@ -38,6 +38,7 @@ public class SpeakersTab extends Activity implements AdapterView.OnItemClickList
         intent.putExtra(SpeakerDescriptionField.SURNAME.toString(), speaker.getSurname());
         intent.putExtra(SpeakerDescriptionField.DESCRIPTION.toString(), speaker.getDescription());
         intent.putExtra(SpeakerDescriptionField.COMPANY.toString(), speaker.getCompany().getName());
+        intent.putExtra(SpeakerDescriptionField.PHOTO_URL.toString(), speaker.getPhotoUrl());
         startActivity(intent);
 }
 }

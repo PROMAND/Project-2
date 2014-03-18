@@ -3,10 +3,13 @@ package pl.byd.wsg.promand.project1.presentation;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import pl.byd.wsg.promand.project1.R;
-import pl.byd.wsg.promand.project1.domain.entity.Speaker;
+import pl.byd.wsg.promand.project1.presentation.helpers.FileCache;
+import pl.byd.wsg.promand.project1.presentation.helpers.ImageLoader;
+import pl.byd.wsg.promand.project1.presentation.helpers.MemoryCache;
 import pl.byd.wsg.promand.project1.presentation.model.SpeakerDescriptionField;
 
 public class SpeakerDescriptionActivity extends Activity {
@@ -29,5 +32,14 @@ public class SpeakerDescriptionActivity extends Activity {
         TextView descriptionText = (TextView) findViewById(R.id.speaker_description);
         String description = intent.getStringExtra(SpeakerDescriptionField.DESCRIPTION.toString());
         descriptionText.setText(description);
+
+        TextView image = (TextView) findViewById(R.id.TEST_image_URL);
+        String imageUrl = intent.getStringExtra(SpeakerDescriptionField.PHOTO_URL.toString());
+        image.setText(imageUrl);
+
+        ImageView speakerPhoto = (ImageView) findViewById(R.id.speaker_image);
+        ImageLoader imageLoader = new ImageLoader(this, new MemoryCache(), new FileCache());
+        imageLoader.downloadImage(imageUrl);
+        imageLoader.displayImage(imageUrl, speakerPhoto);
     }
 }
