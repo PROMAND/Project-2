@@ -40,6 +40,10 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="@string/venue"/>
-
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/sponsorImage"
+            android:src="@drawable/sponsors"/>
     </LinearLayout>
 </RelativeLayout>
