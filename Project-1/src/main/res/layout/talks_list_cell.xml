@@ -20,17 +20,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/start_time" />
+                android:id="@+id/start_time"
+                android:text="12:00"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/end_time"/>
+                android:id="@+id/end_time"
+                android:text="13:00"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/track_title"/>
+                android:id="@+id/track_title"
+                android:text="100"/>
         </LinearLayout>
 
 
@@ -50,12 +53,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/talk_title"/>
+                android:id="@+id/talk_title"
+                android:text="Title placeholder"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/speaker_full_name"/>
+                android:id="@+id/speaker_full_name"
+                android:text="Fullname placeholder"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/attending_button"
+                android:onClick="onClickBtn"
+                android:text="I'M\nGOING"
+                />
         </LinearLayout>
 
     </TableRow>

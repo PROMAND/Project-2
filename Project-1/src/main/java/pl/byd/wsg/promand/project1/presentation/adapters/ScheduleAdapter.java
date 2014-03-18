@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
     }
 
     @Override
-    public View getView(int index, View v, ViewGroup viewGroup) {
+    public View getView(final int index, View v, ViewGroup viewGroup) {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.talks_list_cell, null);
         Talk talk = getItem(index);
 
@@ -33,6 +35,15 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         String endTime = DateUtils.hoursMinutesFormat(talk.getEndTime());
         TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
         talkEndTime.setText(endTime);
+
+        Button button = (Button) view.findViewById(R.id.attending_button);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Toast.makeText(getContext(), "Index - " + index, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
         speakerFullName.setText("Tom cruse"); //TODO
