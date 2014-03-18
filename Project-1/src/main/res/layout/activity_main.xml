@@ -33,12 +33,12 @@
     </TabHost>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="20dip"
+        android:layout_height="50dip"
         android:orientation="vertical"
         android:layout_alignBottom="@+id/tabHost">
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="20dp"
             android:text="@string/venue"/>
         <ImageView
             android:layout_width="fill_parent"
