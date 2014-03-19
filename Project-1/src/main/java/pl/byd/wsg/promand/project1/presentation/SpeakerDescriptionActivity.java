@@ -7,12 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import pl.byd.wsg.promand.project1.R;
-import pl.byd.wsg.promand.project1.presentation.helpers.FileCache;
-import pl.byd.wsg.promand.project1.presentation.helpers.ImageLoader;
-import pl.byd.wsg.promand.project1.presentation.helpers.MemoryCache;
 import pl.byd.wsg.promand.project1.presentation.model.SpeakerDescriptionField;
 
 public class SpeakerDescriptionActivity extends Activity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +37,20 @@ public class SpeakerDescriptionActivity extends Activity {
         image.setText(imageUrl);
 
         ImageView speakerPhoto = (ImageView) findViewById(R.id.speaker_image);
-        ImageLoader imageLoader = new ImageLoader(this, new MemoryCache(), new FileCache());
+
+        /*ImageLoader imageLoader = new ImageLoader(getApplicationContext(), new MemoryCache(), new FileCache(getApplicationContext()));
         imageLoader.downloadImage(imageUrl);
-        imageLoader.displayImage(imageUrl, speakerPhoto);
+        speakerPhoto.setVisibility(View.VISIBLE);
+        imageLoader.displayImage(imageUrl, speakerPhoto);*/
+
+
+        /*TrackDao trackDao = BaseApplication.getTrackDao();//new TrackDao(new DatabaseHelper(getApplicationContext()));
+        trackDao.saveTrack(new Track(1,"sdfsdf"));
+        List<Track> tracks = trackDao.load();*/
+
+
+        /*TextView TEST = (TextView) findViewById(R.id.TEST_image_URL);
+        TEST.setText("");*/
+
     }
 }
