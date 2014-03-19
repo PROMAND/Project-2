@@ -8,15 +8,24 @@
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:padding="5dip">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:id="@+id/speaker_image"
-            android:layout_marginRight="15dip"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_launcher"-->
+            <!--android:id="@+id/speaker_image"-->
+            <!--android:layout_marginRight="15dip"/>-->
+        <pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/tom_cruise"
+            app:border_width="2dp"
+            app:border_color="#F23A3A"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,20 +35,37 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/speaker_full_name"/>
+                android:id="@+id/speaker_full_name"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="Helvetica"
+                android:text="FName placeholder"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/speaker_company"/>
+                android:id="@+id/speaker_company"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="Helvetica"
+                android:text="Company placeholder"/>
 
         </LinearLayout>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:id="@+id/speaker_company"
-            android:layout_marginRight="15dip"/>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_launcher"
+                android:id="@+id/speaker_company"
+                android:layout_marginRight="15dip"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
 
     </TableRow>
 </LinearLayout>

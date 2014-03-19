@@ -7,7 +7,11 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:text="All Schedules"
-        android:id="@+id/reusableTalksList" />
+        android:id="@+id/reusableTalksList"
+        android:divider="#F23A3A"
+        android:dividerHeight="2px"/>
 
 </LinearLayout>
