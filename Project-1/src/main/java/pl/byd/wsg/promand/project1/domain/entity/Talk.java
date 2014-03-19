@@ -13,6 +13,9 @@ public class Talk {
     private List<Long> trackList;
     private List<Long> speakerList;
 
+    public Talk() {
+    }
+
     public Talk(long id, String title, String description, Date startTime, Date endTime, List<Long> trackList, List<Long> speakerList) {
         this.id = id;
         this.title = title;
@@ -49,5 +52,38 @@ public class Talk {
 
     public List<Long> getSpeakerList() {
         return speakerList;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Talk{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", trackList=" + trackList +
+                ", speakerList=" + speakerList +
+                '}';
     }
 }
