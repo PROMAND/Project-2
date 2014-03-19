@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/talk_title"
+
+            android:text="How to be hot?"
+            android:layout_gravity="center"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/talk_description"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:padding="20dp"
+            android:textSize="20dp"
+            android:background="@drawable/rounded_edges"
+
+            android:textStyle="bold"
+            android:text="asgahasfaa asgag agasg aga asgga gsag agaga asfgasgag agsg ag asg agasga aga aag aga gagsag agagasg g
+        asgasgaha
+        sgahasg
+        ashashhas
+        hasgha
+        fufi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/full_time"
+            android:text="11:00 - 12:00"
+            android:paddingLeft="75dp"
+            android:paddingRight="75dp"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/red"
+            android:background="@drawable/rounded_edges"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/track_title"
+            android:layout_gravity="center"
+            android:text="K-8"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp" />
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/list_background">
+
+            <pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/tom_cruise"
+                app:border_width="2dp"
+                app:border_color="#F23A3A" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:fontFamily="Helvetica"
+                    android:id="@+id/speaker_full_name"
+                    android:text="Placeholder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="Helvetica"
+                    android:id="@+id/company_name"
+                    android:text="Placeholder" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <Button
+                    android:background="none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/speaker_description_button"
+                    android:text=">"
+                    android:textSize="60dp"
+                    android:textColor="@color/red"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </TableRow>
+    </LinearLayout>
+</LinearLayout>
