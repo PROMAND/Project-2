@@ -1,24 +1,11 @@
 package pl.byd.wsg.promand.project1.domain.entity;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
-
-@DatabaseTable
 public class Track{
 
-    @DatabaseField(id = true)
     private long id;
-    @DatabaseField
     private String title;
 
     public Track() {
-    }
-
-    public Track(String title) {
-
     }
 
     public Track(long id, String title) {
@@ -40,5 +27,13 @@ public class Track{
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Track{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
