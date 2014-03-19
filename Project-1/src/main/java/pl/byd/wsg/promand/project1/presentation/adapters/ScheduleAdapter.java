@@ -38,7 +38,22 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
         talkEndTime.setText(endTime);
 
-        final Button button = (Button) view.findViewById(R.id.attending_button);
+        Button button = (Button) view.findViewById(R.id.attending_button);
+        setupButtonForTalk(button, talk, index);
+
+
+//        ImageView imageView = (ImageView) view.findViewById(R.id.talk_image);
+
+        TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
+        speakerFullName.setText("Tom cruse"); //TODO
+
+        TextView trackTitle = (TextView) view.findViewById(R.id.track_title);
+        trackTitle.setText("100"); //TODO
+        return view;
+    }
+
+    private void setupButtonForTalk (final Button button, Talk talk, final int index) {
+        //TODO: Check if i'm attending to this talk and then mark button
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -50,17 +65,8 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
                     button.setBackgroundColor(Color.LTGRAY);
                 }
 
-                Toast.makeText(getContext(), "Index - " + index, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), "Index - " + index, Toast.LENGTH_SHORT).show();
             }
         });
-
-//        ImageView imageView = (ImageView) view.findViewById(R.id.talk_image);
-
-        TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
-        speakerFullName.setText("Tom cruse"); //TODO
-
-        TextView trackTitle = (TextView) view.findViewById(R.id.track_title);
-        trackTitle.setText("100"); //TODO
-        return view;
     }
 }
