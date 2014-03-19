@@ -1,6 +1,8 @@
 package pl.byd.wsg.promand.project1.presentation.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,14 +38,23 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
         talkEndTime.setText(endTime);
 
-        Button button = (Button) view.findViewById(R.id.attending_button);
+        final Button button = (Button) view.findViewById(R.id.attending_button);
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+                button.setSelected(!button.isSelected());
+                if (button.isSelected()) {
+                    button.setBackgroundColor(Color.GREEN);
+                } else {
+                    button.setBackgroundColor(Color.LTGRAY);
+                }
+
                 Toast.makeText(getContext(), "Index - " + index, Toast.LENGTH_SHORT).show();
             }
         });
+
+//        ImageView imageView = (ImageView) view.findViewById(R.id.talk_image);
 
         TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
         speakerFullName.setText("Tom cruse"); //TODO
