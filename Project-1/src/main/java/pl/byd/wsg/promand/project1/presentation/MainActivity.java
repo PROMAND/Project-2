@@ -2,6 +2,8 @@ package pl.byd.wsg.promand.project1.presentation;
 
 import android.app.LocalActivityManager;
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;

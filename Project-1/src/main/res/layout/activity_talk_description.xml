@@ -111,7 +111,7 @@
                 android:layout_height="fill_parent">
 
                 <Button
-                    android:background="none"
+                    android:background="@null"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:id="@+id/speaker_description_button"

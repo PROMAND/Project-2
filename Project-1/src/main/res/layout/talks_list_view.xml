@@ -11,7 +11,7 @@
         android:paddingRight="5dp"
         android:text="All Schedules"
         android:id="@+id/reusableTalksList"
-        android:divider="#F23A3A"
+        android:divider="@color/red"
         android:dividerHeight="2px"/>
 
 </LinearLayout>
