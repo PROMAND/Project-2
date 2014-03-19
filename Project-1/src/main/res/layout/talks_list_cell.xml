@@ -64,17 +64,16 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/attending_button"
-                android:onClick="onClickBtn"
                 android:text="I'M\nGOING"
-                />
+                android:layout_gravity="right"/>
         </LinearLayout>
 
     </TableRow>
