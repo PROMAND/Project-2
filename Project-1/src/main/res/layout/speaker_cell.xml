@@ -25,7 +25,7 @@
             android:layout_marginRight="5dip"
             android:src="@drawable/tom_cruise"
             app:border_width="2dp"
-            app:border_color="#F23A3A"/>
+            app:border_color="@color/red"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

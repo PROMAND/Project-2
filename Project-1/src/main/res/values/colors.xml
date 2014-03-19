@@ -3,7 +3,8 @@
 
 
     <color name="text_background">#e7e5e5</color>
-    <color name="red">#FF0000</color>
+    <color name="red">#F23A3A</color>
+    <color name="light_red">#FFB8B8</color>
     <color name="activity_background">#F5F3F0</color>
     <color name="black">#000000</color>
 
