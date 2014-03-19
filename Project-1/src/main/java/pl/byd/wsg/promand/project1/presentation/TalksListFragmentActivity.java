@@ -31,7 +31,7 @@ public class TalksListFragmentActivity extends FragmentActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_schedule_tab);
+        setContentView(R.layout.talks_schedule_tab);
 
         Intent intent = getIntent();
         int i = intent.getIntExtra("tab_index", 99);
