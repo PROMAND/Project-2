@@ -67,30 +67,33 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/speaker_description">
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/speaker_description"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="50dp"
-                android:src="@drawable/twitter"
-                android:id="@+id/twitter_image"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="5dip" />
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="50dp"
-                android:src="@drawable/like"
-                android:id="@+id/like_image"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="5dip" />
-            <ImageView
-                android:layout_width="160dp"
-                android:layout_height="50dp"
-                android:src="@drawable/facebook"
-                android:id="@+id/facebook_image"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="0dip" />
+            <ImageButton
+                android:id="@+id/btnTwitter"
+                android:background="@drawable/twitter"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnFacebook"
+                android:background="@drawable/facebook"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnGoogle"
+                android:background="@drawable/googleplus"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageButton>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
