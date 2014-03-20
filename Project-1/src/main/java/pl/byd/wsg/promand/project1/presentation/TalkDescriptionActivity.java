@@ -4,16 +4,19 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.presentation.model.TalkDescriptionField;
 
 public class TalkDescriptionActivity extends Activity {
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talk_description);
 
-        Intent intent = getIntent();
+       /* Intent intent = getIntent();
         TextView talkTitle = (TextView)findViewById(R.id.talk_title);
         String title = intent.getStringExtra(TalkDescriptionField.TITLE.toString());
         talkTitle.setText(title);
@@ -28,7 +31,7 @@ public class TalkDescriptionActivity extends Activity {
         fullTime.setText(start + " - " + end);
 
 
-
+*/
 
     }
 }

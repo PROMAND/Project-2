@@ -1,7 +1,10 @@
 package pl.byd.wsg.promand.project1.presentation;
 
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,10 +13,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
-
 import java.util.List;
 import java.util.Locale;
-
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.domain.entity.Track;
 import pl.byd.wsg.promand.project1.jsonservice.TalkService;
@@ -37,6 +38,8 @@ public class TalksListFragmentActivity extends FragmentActivity {
         int i = intent.getIntExtra("tab_index", 99);
         Log.i("Some name", "Some number" + i);
 
+        this.registerReceiver(clickedReceiver, new IntentFilter("pl.byd.wsg"));
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the app.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -52,6 +55,13 @@ public class TalksListFragmentActivity extends FragmentActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+    private BroadcastReceiver clickedReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+        }
+    };
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -77,4 +87,8 @@ public class TalksListFragmentActivity extends FragmentActivity {
             return track.getTitle();
         }
     }
+
+        public void onDestroy(){
+            unregisterReceiver(clickedReceiver);
+        }
 }
