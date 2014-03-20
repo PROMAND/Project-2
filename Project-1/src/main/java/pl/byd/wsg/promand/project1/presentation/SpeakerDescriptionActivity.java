@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 import pl.byd.wsg.promand.project1.R;
@@ -21,7 +22,7 @@ public class SpeakerDescriptionActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speaker_description);
-//<<<<<<< Updated upstream
+
 //        Intent intent = getIntent();
 //
 //        TextView fullNameText = (TextView)findViewById(R.id.speaker_full_name);
@@ -36,13 +37,13 @@ public class SpeakerDescriptionActivity extends Activity {
 //        TextView descriptionText = (TextView) findViewById(R.id.speaker_description);
 //        String description = intent.getStringExtra(SpeakerDescriptionField.DESCRIPTION.toString());
 //        descriptionText.setText(description);
-//
+
 //        TextView image = (TextView) findViewById(R.id.TEST_image_URL);
 //        String imageUrl = intent.getStringExtra(SpeakerDescriptionField.PHOTO_URL.toString());
 //        image.setText(imageUrl);
 //
 //        ImageView speakerPhoto = (ImageView) findViewById(R.id.speaker_image);
-//=======
+
         //twitter button
         ImageButton btnTwitter = (ImageButton) findViewById(R.id.btnTwitter);
         btnTwitter.setOnClickListener(new View.OnClickListener() {

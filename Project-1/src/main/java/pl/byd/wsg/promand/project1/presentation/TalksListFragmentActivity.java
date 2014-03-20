@@ -16,27 +16,28 @@ import android.view.Menu;
 import java.util.List;
 import java.util.Locale;
 import pl.byd.wsg.promand.project1.R;
+import pl.byd.wsg.promand.project1.dao.TrackDao;
 import pl.byd.wsg.promand.project1.domain.entity.Track;
 import pl.byd.wsg.promand.project1.jsonservice.TalkService;
 import pl.byd.wsg.promand.project1.jsonservice.TalkServiceImpl;
 import pl.byd.wsg.promand.project1.jsonservice.TrackService;
 import pl.byd.wsg.promand.project1.jsonservice.TrackServiceImpl;
+import pl.byd.wsg.promand.project1.presentation.application.BaseApplication;
 
 public class TalksListFragmentActivity extends FragmentActivity {
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
+    private int tabNumber;
 
-    private TrackService trackService = new TrackServiceImpl();
-    private TalkService talkServise = new TalkServiceImpl();
-    List<Track> trackList = trackService.getTrackList();
+    private TrackDao trackDao = BaseApplication.getTrackDao();
+    List<Track> trackList = trackDao.findAll();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.talks_schedule_tab);
 
         Intent intent = getIntent();
-        int i = intent.getIntExtra("tab_index", 99);
-        Log.i("Some name", "Some number" + i);
+        this.tabNumber = intent.getIntExtra("tab_index", 99);
 
         this.registerReceiver(clickedReceiver, new IntentFilter("pl.byd.wsg"));
 
@@ -71,7 +72,7 @@ public class TalksListFragmentActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new TalksListFragment(trackList.get(position));
+            return new TalksListFragment(trackList.get(position), tabNumber);
         }
 
         @Override
