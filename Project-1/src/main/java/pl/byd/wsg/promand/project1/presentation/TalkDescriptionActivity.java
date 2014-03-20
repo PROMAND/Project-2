@@ -16,7 +16,7 @@ public class TalkDescriptionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talk_description);
 
-       /* Intent intent = getIntent();
+        Intent intent = getIntent();
         TextView talkTitle = (TextView)findViewById(R.id.talk_title);
         String title = intent.getStringExtra(TalkDescriptionField.TITLE.toString());
         talkTitle.setText(title);
@@ -30,8 +30,6 @@ public class TalkDescriptionActivity extends Activity {
         String end = intent.getStringExtra(TalkDescriptionField.END.toString());
         fullTime.setText(start + " - " + end);
 
-
-*/
 
     }
 }

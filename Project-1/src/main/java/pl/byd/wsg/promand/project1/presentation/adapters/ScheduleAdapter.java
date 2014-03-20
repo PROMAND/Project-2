@@ -15,6 +15,7 @@ import java.util.List;
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.domain.entity.Talk;
 import pl.byd.wsg.promand.project1.presentation.TalkDescriptionActivity;
+import pl.byd.wsg.promand.project1.presentation.model.TalkDescriptionField;
 import pl.byd.wsg.promand.project1.utils.DateUtils;
 
 public class ScheduleAdapter extends BaseListAdapter<Talk> {
@@ -27,7 +28,7 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
     @Override
     public View getView(final int index, View v, ViewGroup viewGroup) {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.talks_list_cell, null);
-        Talk talk = getItem(index);
+        final Talk talk = getItem(index);
 
         TextView talkTitle = (TextView) view.findViewById(R.id.talk_title);
         talkTitle.setText(talk.getTitle());
@@ -53,7 +54,12 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
                        public void onClick(View view) {
                               Intent intent = new Intent (ct, TalkDescriptionActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-                                       ct.startActivity(intent);
+                           assert talk != null;
+                           intent.putExtra(TalkDescriptionField.TITLE.toString(),talk.getTitle());
+                           intent.putExtra(TalkDescriptionField.DESCRIPTION.toString(),talk.getDescription());
+                           intent.putExtra(TalkDescriptionField.START.toString(),DateUtils.hoursMinutesFormat(talk.getStartTime()));
+                           intent.putExtra(TalkDescriptionField.END.toString(),DateUtils.hoursMinutesFormat(talk.getEndTime()));
+                           ct.startActivity(intent);
                            }
                    });
                 return view;
