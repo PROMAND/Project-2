@@ -3,6 +3,7 @@ package pl.byd.wsg.promand.project1.presentation.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,21 +69,21 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         return view;
     }
 */
-    private void setupButtonForTalk (final Button button, Talk talk, final int index) {
-        //TODO: Check if i'm attending to this talk and then mark button
-        button.setOnClickListener(new View.OnClickListener() {
+private void setupButtonForTalk (final Button button, Talk talk, final int index) {
+    //TODO: Check if i'm attending to this talk and then mark button
+    button.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                button.setSelected(!button.isSelected());
-                if (button.isSelected()) {
-                    button.setBackgroundColor(Color.GREEN);
-                } else {
-                    button.setBackgroundColor(Color.LTGRAY);
-                }
-
-//                Toast.makeText(getContext(), "Index - " + index, Toast.LENGTH_SHORT).show();
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+            button.setSelected(!button.isSelected());
+            if (button.isSelected()) {
+                button.setTextColor(getContext().getResources().getColor(R.color.green));
+                button.setTypeface(null, Typeface.BOLD);
+            } else {
+                button.setTextColor(Color.BLACK);
+                button.setTypeface(null, Typeface.NORMAL);
             }
-        });
-    }
+        }
+    });
+}
 }
