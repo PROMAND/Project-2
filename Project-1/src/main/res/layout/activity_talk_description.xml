@@ -39,8 +39,8 @@
             android:layout_marginTop="15dp"
             android:id="@+id/full_time"
             android:text="11:00 - 12:00"
-            android:paddingLeft="75dp"
-            android:paddingRight="75dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
             android:layout_gravity="center"
             android:textSize="30dp"
             android:textColor="@color/red"
@@ -87,7 +87,7 @@
                     android:textStyle="bold"
                     android:fontFamily="Helvetica"
                     android:id="@+id/speaker_full_name"
-                    android:text="How to be hot?"/>
+                    android:text="Tom Cruise"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
                     android:textColor="#000000"
                     android:fontFamily="Helvetica"
                     android:id="@+id/company_name"
-                    android:text="Tom cruise" />
+                    android:text="Hollywood" />
             </LinearLayout>
 
             <LinearLayout
