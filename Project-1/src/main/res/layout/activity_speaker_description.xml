@@ -3,16 +3,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
 
-    <RelativeLayout
+    android:background="@color/activity_background">
+
+    <LinearLayout
+        android:layout_margin="25dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="450dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/speaker_description">
 
@@ -26,78 +29,177 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher"
                     android:id="@+id/speaker_image"
-                    android:layout_marginRight="15dip" />
+                    android:layout_marginRight="15dip"
+                    android:layout_gravity="center_vertical" />
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_height="wrap_content"
                     android:layout_width="fill_parent">
 
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/speaker_full_name" />
+                        android:id="@+id/speaker_full_name"
+                        android:text="Tom Cruise"
+                        android:textSize="35dp"
+                        android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/speaker_company" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/speaker_company"
+                            android:gravity="left"
+                            android:text="Hollywood"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher"
+                            android:id="@+id/company_image"
+                            android:layout_gravity="right"
+                            android:layout_alignParentRight="true"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
                 </LinearLayout>
-
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher"
-                android:id="@+id/company_image"
-                android:layout_marginRight="15dip" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:padding="20dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:background="@drawable/rounded_edges"
+                android:textStyle="bold"
+                android:text="asgahasfaa asgag agasg aga asgga gsag agaga asfgasgag agsg ag asg agasga aga aag aga gagsag agagasg gasgasgah sgahasg"
                 android:id="@+id/speaker_description_text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/TEST_image_URL" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/list_background"
+            android:layout_marginBottom="10dp">
 
-            android:layout_below="@+id/speaker_description"
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14dp"
+                    android:id="@+id/start_time"
+                    android:text="12:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14dp"
+                    android:id="@+id/end_time"
+                    android:text="13:00" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+
+                    android:background="#C2C2C2"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14dp"
+                    android:id="@+id/track_title"
+                    android:text="K-8" />
+            </LinearLayout>
+
+            <pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/tom_cruise"
+                app:border_width="2dp"
+                app:border_color="#F23A3A" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:fontFamily="Helvetica"
+                    android:id="@+id/talk_title"
+                    android:text="How to be hot?" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"
+                    android:fontFamily="Helvetica"
+                    android:id="@+id/speaker_full_name"
+                    android:text="Tom Cruise" />
+            </LinearLayout>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnFacebook"
+                android:layout_gravity="left"
                 android:background="@drawable/facebook"
                 android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="50dp"
-
-                ></ImageButton>
+                android:layout_height="60dp"></ImageButton>
 
             <ImageButton
                 android:id="@+id/btnTwitter"
                 android:background="@drawable/twitter"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_gravity="center"
-                ></ImageButton>
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_horizontal"></ImageButton>
 
             <ImageButton
                 android:id="@+id/btnGoogle"
                 android:background="@drawable/googleplus"
-                android:layout_margin="0dp"
-
                 android:layout_width="60dp"
                 android:layout_height="60dp"></ImageButton>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

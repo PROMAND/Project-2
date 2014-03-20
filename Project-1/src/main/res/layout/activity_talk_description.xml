@@ -16,7 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/talk_title"
-
             android:text="How to be hot?"
             android:layout_gravity="center"
             android:textSize="35dp"
@@ -31,14 +30,8 @@
             android:padding="20dp"
             android:textSize="20dp"
             android:background="@drawable/rounded_edges"
-
             android:textStyle="bold"
-            android:text="asgahasfaa asgag agasg aga asgga gsag agaga asfgasgag agsg ag asg agasga aga aag aga gagsag agagasg g
-        asgasgaha
-        sgahasg
-        ashashhas
-        hasgha
-        fufi" />
+            android:text="asgahasfaa asgag agasg aga asgga gsag agaga asfgasgag agsg ag asg agasga aga aag aga gagsag agagasg gasgasgaha sgahasg ashashhas hasgha fufi" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,14 +60,14 @@
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/list_background">
 
             <pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="70dp"
-                android:layout_height="fill_parent"
-                android:layout_margin="10dp"
+                android:layout_height="70dp"
+                android:layout_margin="15dp"
                 android:src="@drawable/tom_cruise"
                 app:border_width="2dp"
                 app:border_color="#F23A3A" />
@@ -82,33 +75,34 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="16dp"
+                    android:textSize="20dp"
                     android:textColor="#000000"
                     android:textStyle="bold"
                     android:fontFamily="Helvetica"
                     android:id="@+id/speaker_full_name"
-                    android:text="Placeholder" />
+                    android:text="How to be hot?"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="15dp"
                     android:textColor="#000000"
                     android:fontFamily="Helvetica"
                     android:id="@+id/company_name"
-                    android:text="Placeholder" />
+                    android:text="Tom cruise" />
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:gravity="right">
 
                 <Button
                     android:background="@null"
@@ -119,7 +113,7 @@
                     android:textSize="60dp"
                     android:textColor="@color/red"
                     android:layout_alignParentRight="true" />
-            </RelativeLayout>
+            </LinearLayout>
         </TableRow>
     </LinearLayout>
 </LinearLayout>
