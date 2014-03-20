@@ -7,6 +7,8 @@ import pl.byd.wsg.promand.project1.dao.TalkDao;
 import pl.byd.wsg.promand.project1.dao.TalkTrackDao;
 import pl.byd.wsg.promand.project1.dao.TrackDao;
 import pl.byd.wsg.promand.project1.domain.entity.Track;
+import pl.byd.wsg.promand.project1.jsonservice.TalkServiceImpl;
+import pl.byd.wsg.promand.project1.jsonservice.TrackServiceImpl;
 
 public class BaseApplication extends Application {
 
@@ -22,8 +24,29 @@ public class BaseApplication extends Application {
         talkDao = new TalkDao(databaseSqlHelper);
         trackDao = new TrackDao(databaseSqlHelper);
         talkTrackDao = new TalkTrackDao(databaseSqlHelper);
+
+        dataInit();
     }
 
+    private void dataInit(){
+        TalkServiceImpl talkService = new TalkServiceImpl();
+        TrackServiceImpl trackService = new TrackServiceImpl();
+
+
+        clearDatabase();// TODO: REMOVE!!!
+
+
+        trackDao.saveFromTrackList(trackService.getTrackList());
+        talkDao.saveFromTalkList(talkService.getTalkList());
+        talkTrackDao.saveFromTalkList(talkService.getTalkList());
+
+
+    }
+    private void clearDatabase(){
+        talkDao.deleteAll();
+        trackDao.deleteAll();
+        talkTrackDao.deleteAll();
+    }
     public static TalkDao getTalkDao() {
         return talkDao;
     }
