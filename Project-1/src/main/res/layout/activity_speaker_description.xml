@@ -186,7 +186,7 @@
                 android:layout_gravity="left"
                 android:background="@drawable/facebook"
                 android:layout_width="60dp"
-                android:layout_height="60dp"></ImageButton>
+                android:layout_height="60dp"/>
 
             <ImageButton
                 android:id="@+id/btnTwitter"
@@ -195,13 +195,13 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:gravity="center_horizontal"></ImageButton>
+                android:gravity="center_horizontal"/>
 
             <ImageButton
                 android:id="@+id/btnGoogle"
                 android:background="@drawable/googleplus"
                 android:layout_width="60dp"
-                android:layout_height="60dp"></ImageButton>
+                android:layout_height="60dp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
