@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 
 import pl.byd.wsg.promand.project1.R;
 
@@ -49,6 +50,14 @@ public class MainActivity extends ActionBarActivity {
         myIntent = new Intent(this, SpeakersTab.class);
         tabSpec.setContent(myIntent);
         myTabHost.addTab(tabSpec);
+
+        changetabs(myTabHost.getTabWidget());
+    }
+
+    private void changetabs(TabWidget tabWidget) {
+        // Change background
+        for(int i=0; i < tabWidget.getChildCount(); i++)
+            tabWidget.getChildAt(i).setBackgroundResource(R.drawable.tab_selector);
     }
 
     @Override

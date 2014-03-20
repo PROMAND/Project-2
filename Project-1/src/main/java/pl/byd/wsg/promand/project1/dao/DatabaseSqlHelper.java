@@ -25,8 +25,8 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
                     TalkColumn.END_TIME + " TEXT" +
                     " )";
     private static final String TRACK_TABLE_CREATE =
-            "CREATE TABLE " + TableName.TRACK + " " +
-                    TrackColumn.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "CREATE TABLE " + TableName.TRACK + " (" +
+                    TrackColumn.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     TrackColumn.TITLE + " TEXT" +
                     " )";
 
@@ -34,7 +34,7 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + TableName.TALK_TRACK + " (" +
                     TalkTrackColumn.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     TalkTrackColumn.ID_TALK + " INTEGER," +
-                    TalkTrackColumn.ID_TRACK + " INTEGER," +
+                    TalkTrackColumn.ID_TRACK + " INTEGER" +
                     " )";
 
     public DatabaseSqlHelper(Context context) {
@@ -45,7 +45,8 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(TALK_TABLE_CREATE);
         sqLiteDatabase.execSQL(TRACK_TABLE_CREATE);
-        sqLiteDatabase.execSQL(TALK_TABLE_CREATE);
+        sqLiteDatabase.execSQL(TALK_TRACK_TABLE_CREATE);
+
     }
 
     @Override
@@ -53,7 +54,6 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
          for(TableName tableName : TableName.values()) {
              sqLiteDatabase.execSQL("DROP TABLE IF EXIST " + tableName);
          }
-         //sqLiteDatabase.execSQL("DROP TABLE IF EXIST " + TableName.TALK);
          onCreate(sqLiteDatabase);
     }
 

@@ -12,7 +12,10 @@ import java.util.List;
 
 import pl.byd.wsg.promand.project1.dao.columns.TableName;
 import pl.byd.wsg.promand.project1.dao.columns.TalkColumn;
+import pl.byd.wsg.promand.project1.dao.columns.TalkTrackColumn;
+import pl.byd.wsg.promand.project1.dao.columns.TrackColumn;
 import pl.byd.wsg.promand.project1.domain.entity.Talk;
+import pl.byd.wsg.promand.project1.domain.entity.Track;
 import pl.byd.wsg.promand.project1.utils.DateUtils;
 
 public class TalkDao extends AbstractDao<Talk>{
@@ -45,6 +48,28 @@ public class TalkDao extends AbstractDao<Talk>{
         Cursor cursor = getDatabase().query(getTableName(), TalkColumn.getColumnNames(), null, null, null, null, null);
         List<Talk> talkList = cursorToList(cursor);
         close();
+        return talkList;
+    }
+    public List<Talk> findByTrack(Track track) {
+        List<Talk> talkList = new ArrayList<Talk>();
+        String talkJoinTrack =
+                "SELECT * " +
+                        "FROM ( " + TableName.TALK + " AS TA " +
+                        "INNER JOIN " + TableName.TALK_TRACK +
+                        " AS TT ON TA." + TalkColumn.ID + " = TT." + TalkTrackColumn.ID_TALK + " ) " +
+                        " INNER JOIN " + TableName.TRACK +
+                        " AS TR ON TR." + TrackColumn.ID + " = TT." + TalkTrackColumn.ID_TRACK +
+                        "WHERE TR." + TrackColumn.ID + " = " + track.getId();
+        Cursor cursor = getDatabase().rawQuery(talkJoinTrack, null);
+        while (cursor.moveToNext()) {
+            Talk talk = new Talk();
+            talk.setId(cursor.getLong(cursor.getColumnIndex("TA." + TalkColumn.ID)));
+            talk.setTitle(cursor.getString(cursor.getColumnIndex("TA." + TalkColumn.TITLE)));
+            talk.setDescription(cursor.getString(cursor.getColumnIndex("TA." + TalkColumn.DESCRIPTION)));
+            talk.setStartTime(DateUtils.convertFromDatabaseFormat(cursor.getString(cursor.getColumnIndex("TA." + TalkColumn.START_TIME))));
+            talk.setStartTime(DateUtils.convertFromDatabaseFormat(cursor.getString(cursor.getColumnIndex("TA." + TalkColumn.END_TIME))));
+            talkList.add(talk);
+        }
         return talkList;
     }
     private List<Talk> cursorToList(Cursor cursor) {

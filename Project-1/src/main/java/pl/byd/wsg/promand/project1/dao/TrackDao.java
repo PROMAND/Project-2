@@ -9,12 +9,22 @@ import java.util.List;
 import pl.byd.wsg.promand.project1.dao.columns.TableName;
 import pl.byd.wsg.promand.project1.dao.columns.TrackColumn;
 import pl.byd.wsg.promand.project1.domain.entity.Track;
+import pl.byd.wsg.promand.project1.jsonservice.TrackServiceImpl;
 
 public class TrackDao extends AbstractDao<Track>{
 
 
     public TrackDao(DatabaseSqlHelper databaseSqlHelper) {
         super(databaseSqlHelper, TableName.TRACK.toString());
+        //TrackServiceImpl trackService = new TrackServiceImpl();
+        //saveFromTrackList(trackService.getTrackList());
+    }
+
+    @Override
+    protected void saveWithoutOpenAndClose(Track track){
+        ContentValues values = new ContentValues();
+        values.put(TrackColumn.TITLE.toString(), track.getTitle());
+        long id = getDatabase().insert(getTableName(), null, values);
     }
 
     @Override
@@ -32,6 +42,7 @@ public class TrackDao extends AbstractDao<Track>{
         close();
         return trackList;
     }
+
     private List<Track> cursorToList(Cursor cursor) {
         List<Track> talkList = new ArrayList<Track>();
         while (cursor.moveToNext()) {
@@ -43,10 +54,11 @@ public class TrackDao extends AbstractDao<Track>{
         return talkList;
     }
 
-    @Override
-    protected void saveWithoutOpenAndClose(Track track){
-        ContentValues values = new ContentValues();
-        values.put(TrackColumn.TITLE.toString(), track.getTitle());
-        long id = getDatabase().insert(getTableName(), null, values);
+    public void saveFromTrackList(List<Track> trackList) {
+        open();
+        for(Track track : trackList) {
+            saveWithoutOpenAndClose(track);
+        }
+        close();
     }
 }

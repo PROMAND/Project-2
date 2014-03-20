@@ -1,10 +1,8 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.byd.wsg.promand.project2.MainActivity$PlaceholderFragment"
-    android:background="@color/activity_background">
+    tools:context="pl.byd.wsg.promand.project2.MainActivity$PlaceholderFragment">
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
     <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
     <!--android:paddingTop="@dimen/activity_vertical_margin"-->
@@ -12,7 +10,7 @@
 
     <TabHost
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:id="@+id/tabHost"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -26,31 +24,42 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"></FrameLayout>
+                android:layout_height="fill_parent"></FrameLayout>
         </LinearLayout>
     </TabHost>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dip"
+        android:layout_height="40dip"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/linearLayout3"
-        >
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:text="@string/venue"
-            android:gravity="bottom"/>
+        android:layout_alignBottom="@+id/tabHost"
+        android:background="@color/light_red">
         <ImageView
-            android:layout_width="190dp"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/red"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/sponsorImage"
-            android:src="@drawable/sponsors"
-            android:layout_gravity="bottom"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/venue"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/sponsorImage"
+                android:src="@drawable/sponsors"/>
+
+            </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

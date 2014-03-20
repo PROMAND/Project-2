@@ -27,7 +27,7 @@ import pl.byd.wsg.promand.project1.R;
 
 public class ImageLoader {
 
-    private static final int STUB_IMAGE = R.drawable.abc_ic_go_search_api_holo_light;
+    private static final int STUB_IMAGE = R.drawable.abc_ab_transparent_dark_holo;
 
     private Map<ImageView, String> imageViews = Collections.synchronizedMap(new WeakHashMap<ImageView, String>());
 

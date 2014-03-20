@@ -38,6 +38,10 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
         talkEndTime.setText(endTime);
 
+        String date = DateUtils.dateFormat(talk.getStartTime());
+        TextView talkDate = (TextView) view.findViewById(R.id.talk_date);
+        talkDate.setText(date);
+
         Button button = (Button) view.findViewById(R.id.attending_button);
         setupButtonForTalk(button, talk, index);
 
