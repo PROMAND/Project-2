@@ -16,7 +16,7 @@
         <RelativeLayout>
 
             <Button
-                android:id="@+id/btnTest"
+                android:id="@+id/btnGoToTalkDesc"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:focusable="false"
