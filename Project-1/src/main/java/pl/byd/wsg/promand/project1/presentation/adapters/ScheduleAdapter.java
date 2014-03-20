@@ -2,6 +2,7 @@ package pl.byd.wsg.promand.project1.presentation.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,9 +39,9 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         TextView talkEndTime = (TextView) view.findViewById(R.id.end_time);
         talkEndTime.setText(endTime);
 
-        String date = DateUtils.dateFormat(talk.getStartTime());
-        TextView talkDate = (TextView) view.findViewById(R.id.talk_date);
-        talkDate.setText(date);
+//        String date = DateUtils.dateFormat(talk.getStartTime());
+//        TextView talkDate = (TextView) view.findViewById(R.id.talk_date);
+//        talkDate.setText(date);
 
         Button button = (Button) view.findViewById(R.id.attending_button);
         setupButtonForTalk(button, talk, index);
@@ -64,12 +65,14 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
                 // TODO Auto-generated method stub
                 button.setSelected(!button.isSelected());
                 if (button.isSelected()) {
-                    button.setBackgroundColor(Color.GREEN);
+//                    button.setBackgroundColor(Color.GREEN);
+                    button.setTextColor(getContext().getResources().getColor(R.color.green));
+                    button.setTypeface(null, Typeface.BOLD);
                 } else {
-                    button.setBackgroundColor(Color.LTGRAY);
+//                    button.setBackgroundColor(Color.LTGRAY);
+                    button.setTextColor(Color.BLACK);
+                    button.setTypeface(null, Typeface.NORMAL);
                 }
-
-//                Toast.makeText(getContext(), "Index - " + index, Toast.LENGTH_SHORT).show();
             }
         });
     }
