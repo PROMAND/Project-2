@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:background="@color/activity_background">
+    android:orientation="horizontal" >
 
 
     <TableRow
@@ -54,10 +53,9 @@
                 android:text="Company placeholder"/>
 
         </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="right">
+            android:layout_height="fill_parent">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -67,7 +65,7 @@
                 android:layout_marginRight="15dip"
                 android:layout_alignParentRight="true"
                 />
-        </LinearLayout>
+        </RelativeLayout>
 
     </TableRow>
 </LinearLayout>

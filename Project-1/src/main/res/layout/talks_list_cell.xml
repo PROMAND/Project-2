@@ -2,8 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/activity_background">
+    android:layout_height="match_parent">
 
 
     <TableRow
@@ -60,7 +59,7 @@
             android:layout_marginRight="5dip"
             android:src="@drawable/tom_cruise"
             app:border_width="2dp"
-            app:border_color="@color/red"/>
+            app:border_color="#F23A3A"/>
 
 
         <LinearLayout
@@ -89,11 +88,9 @@
                 android:text="Placeholder"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:gravity="right"
-            >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
             <Button
                 android:layout_width="wrap_content"
@@ -102,9 +99,9 @@
                 android:text="I'M\nGOING"
                 android:textSize="12dp"
                 android:background="#FFCCCCCC"
-
+                android:layout_alignParentRight="true"
                 />
-        </LinearLayout>
+        </RelativeLayout>
 
     </TableRow>
 </LinearLayout>
