@@ -5,6 +5,7 @@ public class TalkTrack {
     private long id;
     private long talkId;
     private long trackId;
+    private int isAdded;
 
     public TalkTrack() {
     }
@@ -38,12 +39,15 @@ public class TalkTrack {
         this.trackId = trackId;
     }
 
-    @Override
-    public String toString() {
-        return "TalkTrack{" +
-                "id=" + id +
-                ", talkId=" + talkId +
-                ", trackId=" + trackId +
-                '}';
+    public boolean getIsAdded() {
+        return isAdded > 0;
     }
+
+    public void setIsAdded(boolean isAdded) {
+        this.isAdded = isAdded == true ? 1 : 0;
+    }
+    public void setIsAddedByInt(int isAdded) {
+        this.isAdded = isAdded;
+    }
+
 }

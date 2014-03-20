@@ -16,13 +16,12 @@ public class TrackDao extends AbstractDao<Track>{
 
     public TrackDao(DatabaseSqlHelper databaseSqlHelper) {
         super(databaseSqlHelper, TableName.TRACK.toString());
-        //TrackServiceImpl trackService = new TrackServiceImpl();
-        //saveFromTrackList(trackService.getTrackList());
     }
 
     @Override
     protected void saveWithoutOpenAndClose(Track track){
         ContentValues values = new ContentValues();
+        values.put(TrackColumn.ID.toString(), track.getId());
         values.put(TrackColumn.TITLE.toString(), track.getTitle());
         long id = getDatabase().insert(getTableName(), null, values);
     }

@@ -42,4 +42,9 @@ abstract class AbstractDao<T> {
     public String getTableName() {
         return TABLE_NAME;
     }
+    public void deleteAll() {
+        open();
+        getDatabase().delete(getTableName(), null, null);
+        close();
+    }
 }

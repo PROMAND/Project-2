@@ -3,7 +3,8 @@ package pl.byd.wsg.promand.project1.dao.columns;
 public enum TalkTrackColumn {
     ID,
     ID_TRACK,
-    ID_TALK;
+    ID_TALK,
+    IS_ADDED;
 
     public static String[] getColumnNames() {
         String[] names = new String[values().length];

@@ -74,16 +74,12 @@ public class Talk {
         this.startTime = startTime;
     }
 
-    @Override
-    public String toString() {
-        return "Talk{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", trackList=" + trackList +
-                ", speakerList=" + speakerList +
-                '}';
+    public void setTrackList(List<Long> trackList) {
+        this.trackList = trackList;
     }
+
+    public void setSpeakerList(List<Long> speakerList) {
+        this.speakerList = speakerList;
+    }
+
 }

@@ -18,7 +18,7 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
 
     private static final String TALK_TABLE_CREATE =
             "CREATE TABLE " + TableName.TALK + " (" +
-                    TalkColumn.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    TalkColumn.ID + " INTEGER," +
                     TalkColumn.TITLE + " TEXT," +
                     TalkColumn.DESCRIPTION + " TEXT," +
                     TalkColumn.START_TIME + " TEXT," +
@@ -26,7 +26,7 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
                     " )";
     private static final String TRACK_TABLE_CREATE =
             "CREATE TABLE " + TableName.TRACK + " (" +
-                    TrackColumn.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    TrackColumn.ID + " INTEGER, " +
                     TrackColumn.TITLE + " TEXT" +
                     " )";
 
@@ -34,7 +34,8 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + TableName.TALK_TRACK + " (" +
                     TalkTrackColumn.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     TalkTrackColumn.ID_TALK + " INTEGER," +
-                    TalkTrackColumn.ID_TRACK + " INTEGER" +
+                    TalkTrackColumn.ID_TRACK + " INTEGER," +
+                    TalkTrackColumn.IS_ADDED + " INTEGER DEFAULT 0" +
                     " )";
 
     public DatabaseSqlHelper(Context context) {
@@ -46,7 +47,6 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(TALK_TABLE_CREATE);
         sqLiteDatabase.execSQL(TRACK_TABLE_CREATE);
         sqLiteDatabase.execSQL(TALK_TRACK_TABLE_CREATE);
-
     }
 
     @Override
