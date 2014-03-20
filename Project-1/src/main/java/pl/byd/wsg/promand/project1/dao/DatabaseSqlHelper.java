@@ -38,6 +38,7 @@ public class DatabaseSqlHelper extends SQLiteOpenHelper {
                     TalkTrackColumn.IS_ADDED + " INTEGER DEFAULT 0" +
                     " )";
 
+
     public DatabaseSqlHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
