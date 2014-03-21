@@ -56,6 +56,15 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         //  talkDate.setText(date);
 
         Button button = (Button) view.findViewById(R.id.attending_button);
+        boolean b = talkTrackDao.getIsAdded(talk, track, talkTrackDao.findAll());
+        button.setSelected(b);
+        if (button.isSelected()) {
+            button.setTextColor(getContext().getResources().getColor(R.color.green));
+            button.setTypeface(null, Typeface.BOLD);
+        } else {
+            button.setTextColor(Color.BLACK);
+            button.setTypeface(null, Typeface.NORMAL);
+        }
         setupButtonForTalk(button, talk, index);
 
         Button button1 = (Button) view.findViewById(R.id.btnGoToTalkDesc);
@@ -87,7 +96,7 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
     */
     private void setupButtonForTalk(final Button button, final Talk talk, final int index) {
         //TODO: Check if i'm attending to this talk and then mark button
-        // Cia reikes padaryti priskyrima spalvos buttonui, jei jis jau paspaustas
+
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
