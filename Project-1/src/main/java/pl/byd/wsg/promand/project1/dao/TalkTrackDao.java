@@ -59,6 +59,16 @@ public class TalkTrackDao extends AbstractDao<TalkTrack>{
                 " AND " + TalkTrackColumn.ID_TALK + " = " + talk.getId(), null);
         close();
     }
+    public boolean getIsAdded(Talk talk, Track track, List<TalkTrack> talkTrackList) {
+        for(TalkTrack talkTrack : talkTrackList) {
+            if(talkTrack.getTalkId() == talk.getId() && talkTrack.getTrackId() == track.getId()){
+                if(talkTrack.getIsAdded()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     @Override
     protected void saveWithoutOpenAndClose(TalkTrack item) {
         ContentValues values = new ContentValues();

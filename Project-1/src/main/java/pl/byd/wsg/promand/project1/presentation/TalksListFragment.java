@@ -50,18 +50,18 @@ public class TalksListFragment extends Fragment {
         for(Talk talk : talkList) {
             if(!talk.getTrackList().isEmpty()) {
                 if(tabNumber == 0){
-                    boolean isAdded = false;
-                    for(TalkTrack talkTrack : talkTrackList){
-                        long trackId = talk.getTrackList().get(0);
-                        if (talkTrack.getTrackId() == trackId) {
+                    /*
+                    for(TalkTrack talkTrack : talkTrackList) {
+                        if(talkTrack.getTalkId() == talk.getId() && talkTrack.getTrackId() == track.getId()){
                             if(talkTrack.getIsAdded()){
-                                isAdded = true;
                                 result.add(talk);
-                                break;
                             }
+                            break;
                         }
+                    }*/
+                    if(talkTrackDao.getIsAdded(talk,track,talkTrackList)){
+                        result.add(talk);
                     }
-
                 }
                 else {
                     result.add(talk);
