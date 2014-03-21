@@ -51,9 +51,9 @@ public class ScheduleAdapter extends BaseListAdapter<Talk> {
         TextView speakerFullName = (TextView) view.findViewById(R.id.speaker_full_name);
         speakerFullName.setText("Tom cruse"); //TODO
 
-        // String date = DateUtils.dateFormat(talk.getStartTime());
-        // TextView talkDate = (TextView) view.findViewById(R.id.talk_date);
-        //  talkDate.setText(date);
+        String date = DateUtils.dateFormat(talk.getStartTime());
+        TextView talkDate = (TextView) view.findViewById(R.id.speaker_cell_date);
+        talkDate.setText(date);
 
         Button button = (Button) view.findViewById(R.id.attending_button);
         boolean b = talkTrackDao.getIsAdded(talk, track, talkTrackDao.findAll());

@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void setupTabs () {
-        TabHost myTabHost = (TabHost) findViewById(R.id.tabHost);
+        final TabHost myTabHost = (TabHost) findViewById(R.id.tabHost);
         myTabHost.setup(mLocalActivityManager);
 
         TabHost.TabSpec tabSpec = myTabHost.newTabSpec("PersonalScheduleTab");
@@ -52,6 +52,21 @@ public class MainActivity extends ActionBarActivity {
         myTabHost.addTab(tabSpec);
 
         changetabs(myTabHost.getTabWidget());
+
+        myTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+//                int i = Integer.parseInt(s);
+//                if(i == 0) {
+//                    //destroy earth
+//
+//                }
+//                if(i == 1) {
+//                    //destroy mars
+//
+//                }
+            }
+        });
     }
 
     private void changetabs(TabWidget tabWidget) {
