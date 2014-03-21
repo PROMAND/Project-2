@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 
 import pl.byd.wsg.promand.project1.R;
+import pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView;
 import pl.byd.wsg.promand.project1.presentation.model.SpeakerDescriptionField;
 
 public class SpeakerDescriptionActivity extends Activity {
@@ -23,26 +24,35 @@ public class SpeakerDescriptionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speaker_description);
 
-//        Intent intent = getIntent();
-//
-//        TextView fullNameText = (TextView)findViewById(R.id.speaker_full_name);
-//        String name = intent.getStringExtra(SpeakerDescriptionField.NAME.toString());
-//        String surname = intent.getStringExtra(SpeakerDescriptionField.SURNAME.toString());
-//        fullNameText.setText(name + " " + surname);
-//
-//        TextView companyText = (TextView)findViewById(R.id.speaker_company);
-//        String company = intent.getStringExtra(SpeakerDescriptionField.COMPANY.toString());
-//        companyText.setText(company);
-//
-//        TextView descriptionText = (TextView) findViewById(R.id.speaker_description);
-//        String description = intent.getStringExtra(SpeakerDescriptionField.DESCRIPTION.toString());
-//        descriptionText.setText(description);
+        Intent intent = getIntent();
+
+        TextView fullNameText = (TextView) findViewById(R.id.sp_desc_speaker_full_name);
+        String name = intent.getStringExtra(SpeakerDescriptionField.NAME.toString());
+        String surname = intent.getStringExtra(SpeakerDescriptionField.SURNAME.toString());
+        fullNameText.setText(name + " " + surname);
+
+        TextView companyText = (TextView)findViewById(R.id.sp_desc_speaker_company);
+        String company = intent.getStringExtra(SpeakerDescriptionField.COMPANY.toString());
+        companyText.setText(company);
+
+        TextView descriptionText = (TextView) findViewById(R.id.sp_desc_speaker_description_text);
+        String description = intent.getStringExtra(SpeakerDescriptionField.DESCRIPTION.toString());
+        descriptionText.setText(description);
 
 //        TextView image = (TextView) findViewById(R.id.TEST_image_URL);
 //        String imageUrl = intent.getStringExtra(SpeakerDescriptionField.PHOTO_URL.toString());
 //        image.setText(imageUrl);
 //
 //        ImageView speakerPhoto = (ImageView) findViewById(R.id.speaker_image);
+
+        CircleImageView circleImageView = (CircleImageView) findViewById(R.id.sp_desc_profile_image);
+        CircleImageView circleImageView_2 = (CircleImageView) findViewById(R.id.sp_desc_profile_image_2);
+        if ("Tom".equals(name)) {
+
+        } else {
+            circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.chuck_norris));
+            circleImageView_2.setImageDrawable(getResources().getDrawable(R.drawable.chuck_norris));
+        }
 
         //twitter button
         ImageButton btnTwitter = (ImageButton) findViewById(R.id.btnTwitter);

@@ -28,7 +28,7 @@
                     android:layout_width="fill_parent">
 
                     <pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/profile_image"
+                        android:id="@+id/sp_desc_profile_image"
                         android:layout_width="90dp"
                         android:layout_height="fill_parent"
                         android:layout_marginRight="5dip"
@@ -44,7 +44,7 @@
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/speaker_full_name"
+                            android:id="@+id/sp_desc_speaker_full_name"
                             android:text="Tom Cruise"
                             android:textSize="35dp"
                             android:textStyle="bold" />
@@ -57,7 +57,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/speaker_company"
+                                android:id="@+id/sp_desc_speaker_company"
                                 android:gravity="left"
                                 android:text="Hollywood"
                                 android:textSize="25dp"
@@ -88,7 +88,7 @@
                     android:background="@drawable/rounded_edges"
                     android:textStyle="bold"
                     android:text="Tom Cruise is an American film actor and producer. He has been nominated for three Academy Awards and has won three Golden Globe Awards. He started his career at age 19 in the 1981 film Endless Love."
-                    android:id="@+id/speaker_description_text" />
+                    android:id="@+id/sp_desc_speaker_description_text" />
             </LinearLayout>
 
             <TableRow
@@ -139,7 +139,7 @@
                 </LinearLayout>
 
                 <pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
+                    android:id="@+id/sp_desc_profile_image_2"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"

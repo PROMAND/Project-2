@@ -10,6 +10,7 @@ import java.util.List;
 
 import pl.byd.wsg.promand.project1.R;
 import pl.byd.wsg.promand.project1.domain.entity.Speaker;
+import pl.byd.wsg.promand.project1.presentation.helpers.CircleImageView;
 
 public class SpeakerAdapter extends BaseListAdapter<Speaker> {
 
@@ -27,6 +28,13 @@ public class SpeakerAdapter extends BaseListAdapter<Speaker> {
 
         TextView speakerCompany = (TextView) view.findViewById(R.id.speaker_company);
         speakerCompany.setText(speaker.getCompany().getName());
+
+        CircleImageView circleImageView = (CircleImageView) view.findViewById(R.id.cell_profile_image);
+        if ("Tom".equals(speaker.getName())) {
+
+        } else {
+            circleImageView.setImageDrawable(view.getResources().getDrawable(R.drawable.chuck_norris));
+        }
 
         return view;
     }
